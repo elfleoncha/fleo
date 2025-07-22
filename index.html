@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reproductor Glass</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body onload="playSong(0)">
+  <div id="fondo" class="fondo">
+    <img src="Wallpaper.jpg" alt="fondo" />
+  </div>
+
+  <div class="glass-player">
+    <img id="cover" src="cover1.jpg" alt="cover" />
+    <div class="info">
+      <div id="nowPlaying">Reproduciendo...</div>
+      <div class="progress">
+        <span id="currentTime">0:00</span>
+        <input type="range" id="seek" value="0" />
+        <span id="duration">0:00</span>
+      </div>
+      <div class="controls">
+        <button id="prevBtn" aria-label="Previous">⏮</button>
+        <button id="pausePlayBtn" aria-label="Play/Pause">▶</button>
+        <button id="skipBtn" aria-label="Next">⏭</button>
+      </div>
+    </div>
+    <audio id="audio" autoplay></audio>
+  </div>
+
+  <div class="profile-card">
+    <img id="avatar" src="avatar.jpg" alt="avatar" />
+    <div class="profile-info">
+      <h2 class="glow-text">elfleoncha</h2>
+      <p>📍STK|BCN</p>
+    </div>
+    <div class="link-cards">
+      <a href="https://www.instagram.com/fleon.priv" class="link-card glow"><img src="logoIG.jpg" alt="Instagram"></a>
+      <a href="https://open.spotify.com/user/31wbdxst2paxfm4livotc7pe5q2m?si=9323c1b4aed04b50" class="link-card glow"><img src="logosp.png" alt="Spotify"></a>
+      <a href="https://x.com/Gamer111Slender" class="link-card glow"><img src="logox.jpg" alt="X"></a>
+      <a href="https://discordapp.com/users/607658935800954880" class="link-card glow"><img src="logodc.jpg" alt="DC"></a>
+      <a href="https://github.com/elfleoncha" class="link-card glow"><img src="github.jpg" alt="GitHub"></a>
+    </div>
+    <div class="bio">
+      <p>El Aburrimiento es peligroso.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>© 2025 ElFleoncha</p>
+  </footer>
+</body>
+</html>
