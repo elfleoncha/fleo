@@ -16,7 +16,7 @@
 
 .glass-player {
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -121,9 +121,9 @@ button:hover {
 
 .profile-card {
   position: absolute;
-  top: 30%;
+  top: 15rem; 
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,8 +137,8 @@ button:hover {
   max-width: 450px;
   font-family: 'Arial', sans-serif;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 5; /* Lower than glass-player */
   animation: fadeInUp 1.5s ease-out;
-  z-index: 5;
 }
 
 .profile-card img {
@@ -254,11 +254,11 @@ button:hover {
 }
 
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translate(-50%, -60%); }
-  to { opacity: 1; transform: translate(-50%, 0); }
+  from { opacity: 0; transform: translateX(-50%) translateY(-60%); }
+  to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-/* Responsive Design */
+
 @media (max-width: 600px) {
   .glass-player {
     top: 0.5rem;
@@ -285,10 +285,10 @@ button:hover {
   }
 
   .profile-card {
-    top: 20%; /* Moved up to reduce space */
+    top: 20%;
     max-width: 350px;
     padding: 0.75rem;
-    transform: translate(-50%, 0);
+    transform: translateX(-50%);
   }
 
   .profile-card img {
@@ -337,7 +337,8 @@ button:hover {
 
 @media (min-width: 601px) {
   .profile-card {
-    transform: translate(-50%, -40%);
+    top: 12rem; 
+    transform: translateX(-50%);
   }
 
   .site-footer {
