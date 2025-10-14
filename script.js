@@ -1,5 +1,10 @@
 const canciones = [
   {
+    src: 'vacile.mp3',
+    title: 'Vacile - Yan Block',
+    cover: 'vacile.jpg'
+  },
+  {
     src: 'Piensan.mp3',
     title: 'Piensan - Myke Towers',
     cover: 'piensan.jpg'
@@ -108,3 +113,4 @@ audio.addEventListener('ended', nextSong);
 
 // Auto-play on load
 playSong(currentSong);
+
